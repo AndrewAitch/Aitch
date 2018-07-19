@@ -1,0 +1,30 @@
+
+
+<%= form_with(model: [ @portfolio, @portfolio.images.build ], url: '/6833457/gestion/'+@catID.to_s+'/'+@pid.to_s,local: true) do |f| %>
+  <%= f.label :title %>:
+  <%= f.text_field :title %><br />
+
+  <%= f.label :date %>:
+  <%= f.text_field :date %><br />
+
+  <%= f.label :location %>:
+  <%= f.text_field :location %><br />
+
+  <%= f.label :urlv %>:
+  <%= f.text_field :urlv %><br />
+
+  <%= f.label :urll %>:
+  <%= f.text_field :urll %><br />
+
+  <%= f.label :urlm %>:
+  <%= f.text_field :urlm %><br />   
+
+  <%= f.label :urlh %>:
+  <%= f.text_field :urlh %><br />   
+
+  <%= f.label :urlhh %>:
+  <%= f.text_field :urlhh %><br />       
+
+  <%= f.submit %>
+<% end %>
+ 

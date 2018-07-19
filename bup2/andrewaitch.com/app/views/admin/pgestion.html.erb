@@ -1,0 +1,17 @@
+<% @images.each do |image| %>
+    Titre : <a href='<%= image.urlhh %>'><%= image.title %></a><br />
+    Date : <%= image.date %><br />
+    Localisation : <%= image.location %> <br />
+    urlv : <a href='<%= image.urlv %>'/><%= image.urlv %></a><br />
+    urll : <a href='<%= image.urll %>'/><%= image.urll %></a><br /> 
+    urlm : <a href='<%= image.urlm %>'/><%= image.urlm %></a><br />
+    urlh : <a href='<%= image.urlh %>'/><%= image.urlh %></a><br /> 
+    urlhh : <a href='<%= image.urlhh %>'/><%= image.urlhh %></a><br />
+    <a href='/6833457/gestion/<%= @catt %>/<%= @pid %>/<%= image.id %>/edit'> edit </a>
+
+    <%= button_to "delete", {:controller => :images, :action => 'destroy', :id => image.id }, :method => :delete %> 
+    <br />
+<%end%>
+<br/>
+<a href='/6833457/gestion/<%= @catt %>/<%= @pid %>/new' > New </a>
+<a href='/6833457/gestion/<%= @catt %>'> Back </a>

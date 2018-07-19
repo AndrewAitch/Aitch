@@ -1,0 +1,22 @@
+<div  class='row col-12' id='main'>
+    <div id='BL'>
+        <div id='contBL'>
+            <ul id="lM"/>
+                <% @portfolios.each do |portfolio| %>
+                    <li class='lMB'> <a class='aLM' href='/portraits/<%= portfolio.pname %>'> <%= portfolio.dpname %> </a> </li>
+                <% end %>
+            </ul>
+        </div>
+    </div>
+    <div id='BR'>
+        <div id='contBR'>
+            <div id="contentR">
+
+            </div>
+        </div>
+    </div>
+    <% @images.each do |i| %> 
+
+    <% end %>
+</div>
+
