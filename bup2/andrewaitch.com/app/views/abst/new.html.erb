@@ -1,0 +1,14 @@
+
+<%= form_for(@portfolio, url: '/6833457/gestion/'+@catID.to_s ) do |f| %>
+  <%= f.label :dpname %>:
+  <%= f.text_field :dpname %><br />
+
+  <%= f.label :pname %>:
+  <%= f.text_field :pname %><br />
+
+  <%= f.label :text %>
+  <%= f.text_area :text %> <br/>
+  <%= f.hidden_field :catID, value: @catID.to_i %>
+  <%= f.submit %>
+<% end %>
+<a href='/6833457/gestion/<%= @catID.to_s %>'> Back </a>

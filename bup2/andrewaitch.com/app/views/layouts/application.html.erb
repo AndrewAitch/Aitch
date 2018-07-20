@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aitch</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class ='nh'>
+      <li id='topmenu' class="row">
+        <ul id='aitch' class="col-2">Aitch</ul>
+        <ul id='blank' class="col-5"></ul>
+        <div class="col-5" id="buttons">
+          <ul class='buttonM'><a href='/portraits'>portraits</a></ul>
+          <ul class='buttonM'><a href='/monographs'>monographs</a></ul>
+          <ul class='buttonM'><a href='/abstract'>abstract</a></ul>
+          <ul class='buttonM'><a href='/upcoming'>upcoming </a></ul>
+          <ul class='buttonM'><a href='/author'>author</a></ul>
+          <ul class='buttonM'><a href='/contact'>contact</a></ul>
+          <ul class='buttonM'><a href='/home'>home</a></ul>
+        </div>
+    </li>
+    <%= yield %>
+    <div id='footer' class='row'>
+      <span id='lf'>
+      </span>
+    </div>
+  </body>
+</html>

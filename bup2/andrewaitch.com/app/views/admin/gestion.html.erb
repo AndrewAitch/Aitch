@@ -1,0 +1,16 @@
+<% @portfolios.each do |portfolio| %>
+    Dpname : <a href='/6833457/gestion/<%= @catt %>/<%= portfolio.id %>' > <%= portfolio.dpname %> </a>; <br /> Pname : <%= portfolio.pname %>  <a href='/6833457/gestion/<%= @catt %>/<%= portfolio.id %>/edit'> edit </a>
+    <% if (@catt == "1") %>
+        <%= button_to "delete", {:controller => :portraits, :action => 'destroy', :id => portfolio.id }, :method => :delete %> 
+    <% elsif (@catt == "2") %>
+        <%= button_to "delete", {:controller => :monographs, :action => 'destroy', :id => portfolio.id }, :method => :delete %>
+    <% elsif (@catt == "3") %>
+        <%= button_to "delete", {:controller => :abst, :action => 'destroy', :id => portfolio.id }, :method => :delete %>
+    <% elsif (@catt == "4") %>
+        <%= button_to "delete", {:controller => :upcoming, :action => 'destroy', :id => portfolio.id }, :method => :delete %>   
+    <% end %>
+    <br />
+<%end%>
+<br/>
+<a href='/6833457/gestion/<%= @catt %>/new' > New </a>
+<a href='/6833457'> Back </a>

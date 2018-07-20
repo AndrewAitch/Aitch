@@ -1,0 +1,253 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import 'normalize';
+
+$LLG: #DDDDDD;
+$LG: #C0C0C0;
+$G: #969696;
+
+$DG: #333333;
+
+$DDG: #303030;
+
+$Y: #FFFFCC ;
+
+* {
+    box-sizing:border-box;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+html {
+    height: 100%;
+    max-height:100%;
+    max-width:100%;
+    overflow:hidden;
+}
+
+body {
+    font-family : Arial, Helvetica, sans-serif;
+    background-color : $G;
+    height:100%;
+    max-height:100%;
+    max-width:100%;
+    overflow: hidden;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:2fr 30fr 2fr;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+#topmenu {
+    padding-top:1.5%;
+    padding-bottom:0.3%;
+}
+
+#topmenu ul {
+    display:inline-block;
+}
+
+
+
+.buttonM {
+    padding: 0% 0% 0% 0%;
+    text-align: left;
+    width: auto;
+    float: left;
+    margin-left:2.5%;
+    margin-top: 0%;
+    margin-right:0%;
+    margin-bottom: 0%;
+    font-size:1.4em;
+}
+#topmenu a{
+    color: $DG;
+    font-weight: 850;
+}
+
+#aitch {
+    margin: 0% 0% 0% 0%;
+    color: $DDG;
+    font-size: 1.8em;
+    font-weight: 900;
+    padding-left:2%;
+    text-align: left;
+}
+#blank {
+    margin: 0% 0% 0% 0%;
+}
+
+#footer {
+    position: absolute;
+    bottom:0px;
+    padding-bottom: 1%;
+    padding-left: 2%;
+    padding-right:2%;
+    width:100%;
+}
+
+#main {
+    position: relative;
+    display:grid;
+    // grid-template-columns: 17fr 33fr;
+    grid-template-columns: 22fr 33fr;
+    grid-template-rows: 1fr;
+}
+#BL, #BR {
+    max-height:100%;
+}
+
+#contBL {
+    padding-right:0.5%;
+    width:95%;
+    float:right;
+    border-top: 2px inset $DG;
+    height:100%;
+}
+#contBR{
+    margin-left: auto;
+    margin-right:auto;
+    padding-left:0.5%;
+    border-top: 2px inset $DG;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#picContainer {
+    height:85%;
+    padding-right:15%;
+}
+#contentR {
+    margin-left: auto;
+    margin-right: auto;
+    min-height:90%;
+    max-height:91%;
+    border:2px rgb(50,50,50) groove;
+    background-color: $LG;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+#contentR > #cham {
+    background-color:$LLG;
+}
+
+#footerh {
+    position: absolute;
+    bottom:0px;
+    padding-bottom: 1%;
+    padding-left: 2%;
+    padding-right:2%;
+}
+@media screen and (min-width:1280px) {
+    #buttons {
+        float:right;
+        width:auto;
+        min-width: 919px;
+        padding-right: 2%;
+    }
+    #aitch {
+        min-width: 85px;
+    }
+}
+.h {
+    h1 {
+        color: $Y;
+        font-weight: 900;
+        font-size:3.61093em;
+        margin-bottom:15%;
+        float: right;
+    }
+    h2 {
+        color: $Y;
+        font-weight: 850;
+        font-size: 3.3em;
+        margin-top:22%;
+        margin-bottom:22%;
+        float:right;
+    }
+    #footerh {
+        color: $Y;
+        font-weight:500;
+    }
+    #topmenu a {
+        color: $Y;
+    }
+    #BL {
+        padding-left:2%;
+    }
+
+    #lf {
+        float:left;
+        display: block;
+    }
+    #border {
+        width: 97%;
+        border-top: 2px solid $Y;
+    }
+    #blanf {
+        display:block;
+    }
+    #rf {
+        float:right;
+        text-align: right;
+        padding-right:2%;
+        display:block;
+    }
+    #contBR {
+        border-top:none;
+        text-align:center;
+    }
+    #indexPic {
+        margin-left: auto;
+        margin-right: auto;
+        height:100%;
+        border:3px rgb(50,50,50) solid;
+        overflow:hidden;
+    }
+    #mainT {
+        float:right;
+        width:85%;
+        padding-bottom:2%;
+    }
+
+}
